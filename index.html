@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-
     <link rel="stylesheet" href="styles/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -12,10 +11,11 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body class="start">
     <div class="container">
-      <form class="row g-4">
+      <form class="row g-4" id="search-form">
         <div class="col-auto">
           <label for="search" class="visually-hidden">🔍Seacrh Your City</label>
 
@@ -23,7 +23,7 @@
             type="search"
             class="form-control search"
             placeholder="🔍Seacrh Your City"
-            id="search-form"
+            id="query"
           />
         </div>
         <div class="col-auto">
@@ -42,18 +42,22 @@
           <div class="weather">
             <div class="row align-items-center one">
               <div class="first">
-                <div class="col">Mostly Sunny</div>
+                <div class="col" id="description">Mostly Sunny</div>
 
                 <div class="col">
                   <div class="emoji">🌤️</div>
-                  <div class="temperature">22°C</div>
+                  <div class="temperature">
+                    <span id="temperature">22</span>°C
+                  </div>
                 </div>
               </div>
               <div class="second">
                 <div class="col">
-                  <div class="col">Precipitation: 1%</div>
-                  <div class="col">Humidity: 77%</div>
-                  <div class="col">Wind: 24 km/h</div>
+                  <div class="col">
+                    Precipitation: <span id="precip">1</span>%
+                  </div>
+                  <div class="col">Humidity: <span id="humid">77</span>%</div>
+                  <div class="col">Wind: <span id="wind">24</span>km/h</div>
                 </div>
               </div>
               <div class="third">
@@ -122,6 +126,6 @@
         </div>
       </div>
     </div>
-    <script src="styles/source.js"></script>
+    <script src="javascript/source.js"></script>
   </body>
 </html>
