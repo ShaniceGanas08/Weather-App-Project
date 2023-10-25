@@ -42,7 +42,6 @@
   border-radius: 25px;
   block-size: 180px;
 }
-
 .emoji {
   font-size: 35px;
   display: inline;
@@ -122,4 +121,7 @@
   position: relative;
   right: -250px;
   top: -532px;
+}
+#description{
+  text-transform: capitalize;
 }

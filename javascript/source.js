@@ -1,15 +1,14 @@
-function formattedTime(date) {
-  let hours = date.getHours();
-  if (hours < 10) {
+function formatDate(timestamp){
+let date = new Date(timestamp);
+let hours = date.getHours();
+ if (hours < 10) {
     hours = `0${hours}`;
   }
-
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
+let minutes = date.getMinutes();
+if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let dayIndex = date.getDay();
-  let days = [
+ let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -18,9 +17,11 @@ function formattedTime(date) {
     "Friday",
     "Saturday"
   ];
-  let day = days[dayIndex];
-  return `${days[dayIndex]} ${hours}:${minutes}`;
+let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+
 }
+
 function weatherCondition(response) {
   let nameCity = document.querySelector("#name");
   nameCity.innerHTML = response.data.name;
@@ -34,8 +35,9 @@ function weatherCondition(response) {
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   console.log(response);
+  document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
 }
 
 function search(event) {
