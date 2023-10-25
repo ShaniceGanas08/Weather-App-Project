@@ -23,6 +23,7 @@ let day = days[date.getDay()];
 }
 
 function weatherCondition(response) {
+  console.log(response.data);
   let nameCity = document.querySelector("#name");
   nameCity.innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -53,4 +54,3 @@ let currentTime = new Date();
 let cityElement = document.querySelector("#name");
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
-dateElement.innerHTML = formattedTime(currentTime);
