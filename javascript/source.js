@@ -37,8 +37,10 @@ function weatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  console.log(response);
   document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute = ("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
 }
 
 function search(event) {
