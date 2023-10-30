@@ -37,21 +37,26 @@ function weatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
+  date.innerHTML = formatDate(response.data.dt * 1000);
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-function search(event) {
-  event.preventDefault();
-  let apiKey = "842b36d55cb28eba74a018029d56b04c";
-  let city = document.querySelector("#query").value;
+function search(city){
+let apiKey = "842b36d55cb28eba74a018029d56b04c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(weatherCondition);
 }
 
-let dateElement = document.querySelector("#date");
+function handleSubmit(event) {
+  event.preventDefault();
+let query = document.querySelector("#query");
+search(query.value);
+}
+search("Durban");
+
+let date = document.querySelector("#date");
 let currentTime = new Date();
 let cityElement = document.querySelector("#name");
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSubmit);
