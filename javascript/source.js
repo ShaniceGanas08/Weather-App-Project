@@ -23,11 +23,13 @@ let day = days[date.getDay()];
 }
 
 function weatherCondition(response) {
+celsiusTemperature = response.data.main.temp;
+
   console.log(response.data);
   let nameCity = document.querySelector("#name");
   nameCity.innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
   document.querySelector("#humid").innerHTML = Math.round(
     response.data.main.humidity
@@ -53,10 +55,33 @@ function handleSubmit(event) {
 let query = document.querySelector("#query");
 search(query.value);
 }
-search("Durban");
+let celsiusTemperature = null;
+
+function fahrenheitTemperature(event){
+  event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahTemperature);
+}
+
+function displayCelsiusTemperature(event){
+event.preventDefault();
+celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 let date = document.querySelector("#date");
 let currentTime = new Date();
 let cityElement = document.querySelector("#name");
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheit = document.querySelector("#fahrenheit") 
+fahrenheit.addEventListener("click", fahrenheitTemperature);
+let celsius = document.querySelector("#celsius") 
+celsius.addEventListener("click", displayCelsiusTemperature);
+search("Durban");
