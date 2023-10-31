@@ -48,26 +48,26 @@
 }
 
 .temperature {
-  font-size: 40px;
+  font-size: 35px;
   display: inline;
 }
 
 .first {
   position: relative;
-  left: -210px;
-  bottom: -40px;
+  left: 20px;
+  bottom: 2px;
 }
 
 .second {
   position: relative;
-  right: -24px;
-  top: -50px;
+  right: 200px;
+  top: -120px;
 }
 
 .third {
   position: relative;
   right: -230px;
-  top: -115px;
+  top: -205px;
   font-size: 25px;
 }
 
@@ -132,6 +132,10 @@ text-decoration: none;
  text-decoration: none;
 
 }
+.units {
+  font-size: 14px;
+}
+
 #description{
   text-transform: capitalize;
 }

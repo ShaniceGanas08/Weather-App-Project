@@ -47,25 +47,21 @@
           <div class="weather">
             <div class="row align-items-center one">
               <div class="first">
+                <div>
+                  <strong class="temperature" id="temperature"></strong>
+                  <span class="units" id="units">
+                    <a href="#" id="celsius" class="active">°C</a> |
+                    <a href="#" id="fahrenheit">°F</a></span
+                  >
+                </div>
                 <div class="col" id="description"></div>
-
                 <div class="col">
-                  <div>
+                  <div class="icon">
                     <img
                       id="icon"
                       src="https://openweathermap.org/img/wn/10d@2x.png"
                       alt="weather icon"
                     />
-                  </div>
-                  <div>
-                    <strong class="temperature" id="temperature"></strong>
-                    <span id="units"></span>
-                      <a href="#" id="celsius" class="active">°C</a> | <a
-                        href="#"
-                        id="fahrenheit"
-                        >°F</a
-                      ></span
-                    >
                   </div>
                 </div>
               </div>
