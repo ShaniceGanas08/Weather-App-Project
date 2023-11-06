@@ -38,7 +38,7 @@ celsiusTemperature = response.data.main.temp;
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
+    response.data.weather[0].main;
   date.innerHTML = formatDate(response.data.dt * 1000);
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
