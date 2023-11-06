@@ -71,7 +71,7 @@ background: radial-gradient(circle at 12.3% 19.3%,
 }
 .first:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .second {
