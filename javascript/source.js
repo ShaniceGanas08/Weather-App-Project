@@ -74,6 +74,26 @@ celsius.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function displayForecast(){
+  let days = ["Tues", "Wed," "Thu", "Fri", "Sat"];
+  let forecastHtml= "";
+days.forEach(function (day){
+forecastHtml = 
+forecastHtml +
+` <div class="tues">
+                <div class="col day">${day}</div>
+                <div class="col date">19/09</div>
+                <div class="col">
+                  <div class="icon">⛅</div>
+                  <div class="col temp">22°C | <span class="min">16°C</span></div>
+                </div>
+              </div>
+`;
+});
+let forecastElement = document.querySelector("#weather-five");
+forecastElement.innerHTML = forecastHtml;
+}
+
 let date = document.querySelector("#date");
 let currentTime = new Date();
 let cityElement = document.querySelector("#name");
@@ -85,3 +105,4 @@ fahrenheit.addEventListener("click", fahrenheitTemperature);
 let celsius = document.querySelector("#celsius") 
 celsius.addEventListener("click", displayCelsiusTemperature);
 search("Durban");
+displayForecast();
