@@ -75,7 +75,7 @@ celsius.classList.add("active");
 }
 
 function displayForecast(){
-  let days = ["Tues", "Wed," "Thu", "Fri", "Sat"];
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
   let forecastHtml= "";
 days.forEach(function (day){
 forecastHtml = 

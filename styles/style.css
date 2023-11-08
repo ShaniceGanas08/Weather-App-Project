@@ -2,14 +2,15 @@
   color: white;
   font-weight: bold;
   padding-bottom: 100px;
-    
-  }
-.min{
+
+}
+
+.min {
   color: rgba(0, 0, 0, 0.5);
 }
 
 .start {
-  
+
   max-width: 650px;
   margin: 0 auto;
   color: 282a36;
@@ -20,7 +21,7 @@
 }
 
 .container {
-background: radial-gradient(circle at 12.3% 19.3%,
+  background: radial-gradient(circle at 12.3% 19.3%,
       rgb(85, 88, 218) 0%,
       rgb(95, 209, 249) 100.2%);
   border: rgb(85, 88, 218) 0%;
@@ -51,6 +52,12 @@ background: radial-gradient(circle at 12.3% 19.3%,
   border: 2px white solid;
   border-radius: 25px;
 }
+
+#weather-five {
+  display: flex;
+  justify-content: space-around;
+}
+
 .emoji {
   font-size: 35px;
   display: inline;
@@ -66,13 +73,14 @@ background: radial-gradient(circle at 12.3% 19.3%,
   left: 190px;
   bottom: 50px;
   background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
-    max-width: 150px;
-    text-align: center;
-    max-height: 200px;
-    border: 2px white dotted;
-    border-radius: 10px;   
-    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+  text-align: center;
+  max-height: 200px;
+  border: 2px white dotted;
+  border-radius: 10px;
+  box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
 }
+
 .first:hover {
   cursor: pointer;
   transform: scale(1.05);
@@ -83,14 +91,14 @@ background: radial-gradient(circle at 12.3% 19.3%,
   right: 185px;
   top: -180px;
   background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
-    max-width: 150px;
-    padding: 40px 25px 40px 25px;
-    text-align: center;
-        max-height: 200px;
-    border: 2px white solid;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+  padding: 40px 25px 40px 25px;
+  text-align: center;
+  max-height: 200px;
+  border: 2px white solid;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 .third {
@@ -99,14 +107,14 @@ background: radial-gradient(circle at 12.3% 19.3%,
   top: -380px;
   font-size: 30px;
   background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
-    max-width: 150px;
-padding: 60px;
-text-align: center;
-        max-height: 200px;
-        padding: 30px 25px 30px 25px;
-    border: 2px white solid;
-    border-radius: 10px;
-    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+  padding: 60px;
+  text-align: center;
+  max-height: 200px;
+  padding: 30px 25px 30px 25px;
+  border: 2px white solid;
+  border-radius: 10px;
+  box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -124,12 +132,6 @@ text-align: center;
 
 .temp {
   font-size: 15px;
-}
-
-.tues {
-  position: relative;
-  left: -188px;
-  top: 30px;
 }
 
 .wed {
@@ -157,19 +159,21 @@ text-align: center;
 }
 
 .active {
-color: black;
-cursor: default;
-text-decoration: none;
+  color: black;
+  cursor: default;
+  text-decoration: none;
 
 }
+
 .active:hover {
- text-decoration: none;
+  text-decoration: none;
 
 }
+
 .units {
   font-size: 14px;
 }
 
-#description{
+#description {
   text-transform: capitalize;
 }
