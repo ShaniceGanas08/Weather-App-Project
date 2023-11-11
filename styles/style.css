@@ -4,13 +4,18 @@
   padding-bottom: 100px;
 
 }
+body {
+ 
+}
 
 .min {
   color: rgba(0, 0, 0, 0.5);
 }
 
 .start {
-
+background: radial-gradient(circle at 12.3% 19.3%,
+      rgb(85, 88, 218) 0%,
+      rgb(95, 209, 249) 100.2%);
   max-width: 650px;
   margin: 0 auto;
   color: 282a36;
@@ -21,9 +26,8 @@
 }
 
 .container {
-  background: radial-gradient(circle at 12.3% 19.3%,
-      rgb(85, 88, 218) 0%,
-      rgb(95, 209, 249) 100.2%);
+  background-image: url("https://www.cambridge.org/elt/blog/wp-content/uploads/2019/02/background-3268840_1920.jpg");
+ 
   border: rgb(85, 88, 218) 0%;
   border-radius: 20px;
   box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
@@ -51,6 +55,7 @@
   block-size: 200px;
   border: 2px white solid;
   border-radius: 25px;
+  padding: 35px 15px;
 }
 
 #weather-five {
