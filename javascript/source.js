@@ -42,6 +42,7 @@ celsiusTemperature = response.data.main.temp;
   date.innerHTML = formatDate(response.data.dt * 1000);
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+forecastData(response.data.city);
 }
 
 function search(city){
@@ -73,8 +74,15 @@ celsius.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+function forecastData(city){
+let apiKey = "842b36d55cb28eba74a018029d56b04c";
+let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+console.log(apiUrl)
+ axios.get(apiUrl).then(displayForecast);
+}
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data);
   let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
   let forecastHtml= "";
 days.forEach(function (day){
@@ -90,6 +98,9 @@ forecastHtml +
               </div>
 `;
 });
+
+
+
 let forecastElement = document.querySelector("#weather-five");
 forecastElement.innerHTML = forecastHtml;
 }
@@ -105,4 +116,3 @@ fahrenheit.addEventListener("click", fahrenheitTemperature);
 let celsius = document.querySelector("#celsius") 
 celsius.addEventListener("click", displayCelsiusTemperature);
 search("Durban");
-displayForecast();
