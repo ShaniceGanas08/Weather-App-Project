@@ -37,6 +37,14 @@ celsiusTemperature = response.data.main.temp;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#maxi").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+document.querySelector("#mini").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   date.innerHTML = formatDate(response.data.dt * 1000);
@@ -102,7 +110,7 @@ forecastHtml +
                 <div class="col date">19/09</div>
                 <div class="col">
                   <div class="icons"><img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"/></div>
-                  <div class="col temp"><span class="max">${Math.round(day.temp.max)}°C </span>| <span class="min">${Math.round(day.temp.min)}°C</span></div>
+                  <div class="col temp"><span class="max">${Math.round(day.temp.max)}°C </span><span class="line">|</span> <span class="min">${Math.round(day.temp.min)}°C</span></div>
                 </div>
               </div>
 `;
