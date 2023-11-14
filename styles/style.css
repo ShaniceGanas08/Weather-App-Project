@@ -4,9 +4,14 @@
   padding-bottom: 100px;
 
 }
-
+.date{
+  display: none;
+}
 .min {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(45, 10, 248, 0.5);
+}
+.max {
+  color: rgba(45, 10, 248);
 }
 
 .start {
@@ -44,7 +49,7 @@ background: radial-gradient(circle at 12.3% 19.3%,
 }
 
 .containertwo {
-  padding: 31px 31px;
+  padding: 40px 10px;
 }
 
 .weather {
@@ -52,7 +57,7 @@ background: radial-gradient(circle at 12.3% 19.3%,
   block-size: 200px;
   border: 2px white solid;
   border-radius: 25px;
-  padding: 35px 15px;
+  padding: 25px 45px;
 }
 
 #weather-five {
@@ -131,7 +136,9 @@ background: radial-gradient(circle at 12.3% 19.3%,
 .icon {
   font-size: 25px;
 }
-
+.icons{
+    width: 100%;
+}
 .temp {
   font-size: 15px;
 }

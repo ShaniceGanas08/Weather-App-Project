@@ -101,8 +101,8 @@ forecastHtml +
                 <div class="col day">${formatDay(day.dt)}</div>
                 <div class="col date">19/09</div>
                 <div class="col">
-                  <div class="icon"> <img src="${day.weather.icon}"/></div>
-                  <div class="col temp">${Math.round(day.temp.max)}°C | <span class="min">${Math.round(day.temp.min)}°C</span></div>
+                  <div class="icons"><img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"/></div>
+                  <div class="col temp"><span class="max">${Math.round(day.temp.max)}°C </span>| <span class="min">${Math.round(day.temp.min)}°C</span></div>
                 </div>
               </div>
 `;
