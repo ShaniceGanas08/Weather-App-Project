@@ -75,7 +75,9 @@ background-color: rgba(0, 0, 0, 0.35);
   font-size: 35px;
   display: inline;
 }
-
+.shan{
+  font-size: 15px;
+}
 .temperature {
   font-size: 35px;
   display: inline;
